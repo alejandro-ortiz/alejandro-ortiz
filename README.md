@@ -1,0 +1,3 @@
+- 👋 Hi, I’m @alejandro-ortiz
+- 👀 I’m interested in Rocketry, Tennis, Web Development, Electronics
+- 🌱 I’m currently learning Git and Javascript
