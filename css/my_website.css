@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    background-color: rgb(231, 231, 231);
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+p {
+    padding: 1em;
+    margin: 1em;
+    background-color: white;
+}
+
+img {
+    padding: 1em;
+}
+
+header {
+    background-color: rgb(28, 30, 155);
+    color: white;
+    overflow: hidden;
+}
+
+header h1 {
+    margin: .5em;
+    text-align: center;
+}
