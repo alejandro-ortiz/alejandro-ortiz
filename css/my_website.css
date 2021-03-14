@@ -7,46 +7,26 @@ body{
     line-height:normal;
 }
 .main-header{
-    background-color:#003F87;
+    background-color: rgb(28, 30, 155);
     color:#ffffff;
     height: 75px;
     padding: 0em;
     width:100%;
     overflow: hidden;
 }
-.text{
+.paragraph{
     color: black;
+    padding-top:.5em;
     padding:1em;
     margin-left:1em;
     margin-right:1em;
-    outline-color: rgb(255, 0, 0);
     background-color:white;
-    outline-style: solid;
-    outline-width: 1em;
 }
 #title{
     margin:5px;
     padding:10px;
+    padding-left:.5em;
 }
-.text2{
-    color: black;
-    padding:.5em;
-    margin-top:2em;
-    margin-left:1em;
-    margin-right:1em;
-    outline-color: rgb(0, 4, 255);
-    background-color:white;
-    outline-style: solid;
-    outline-width: 1em;
-}
-.text3{
-    color: black;
-    padding:.5em;
-    margin-top:2em;
-    margin-left:1em;
-    margin-right:1em;
-    outline-color: rgb(255, 0, 0);
-    background-color:white;
-    outline-style: solid;
-    outline-width: 1em;
+.img{
+    padding:1em;
 }
