@@ -7,15 +7,6 @@ body {
     line-height: normal;
 }
 
-header {
-    background-color: rgb(28, 30, 155);
-    color: #ffffff;
-    height: 75px;
-    padding: 0em;
-    width: 100%;
-    overflow: hidden;
-}
-
 p {
     color: black;
     padding-top: .5em;
@@ -25,12 +16,21 @@ p {
     background-color: white;
 }
 
+img {
+    padding: 1em;
+}
+
+header {
+    background-color: rgb(28, 30, 155);
+    color: #ffffff;
+    height: 75px;
+    padding: 0em;
+    width: 100%;
+    overflow: hidden;
+}
+
 header h1 {
     margin: 5px;
     padding: 10px;
     padding-left: .5em;
-}
-
-img {
-    padding: 1em;
 }
