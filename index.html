@@ -5,25 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/my_website.css">
+    <script src="javascript.js"></script>
     <title>Alejandro Ortiz</title>
 </head>
 
 <body>
     <header>
+        <div class="dropdown">
+            <button onclick="dropDownFunction(this)" class="dropbtn" id="dropdownbutton">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="/index">Home</a>
+              <a href="/about">About</a>
+              <a href="/tennis">Tennis</a>
+              <a href="/coding">Coding</a>
+            </div>
+          </div>
         <h1>Alejandro Ortiz</h1>
+        <img src="images/tennis.JPEG" alt="Profile Pic" id="profilePic">
     </header>
-    <main>
-        <p>Hi, I’m Alejandro Ortiz. I enjoy in Rocketry, Tennis, Web Development, Electronics, and Scouts. I am
-            currently learning Git and JavaScript.
-        </p>
-        <p>❤️My dream job is to work at Apple, building web applications.
-        </p>
-        <p>❤️My dream is to teach others about electronics, so they can enjoy technology as much as I do.
-        </p>
-        <p>My favorite tools include VS Code, Git, GitHub, and MacOS as seen bellow.
-        </p>
-        <img src="images/tools.jpg" alt="my favorite tools" width="50%">
+    <main id="homeMain">
+        <div class="homepagecontainers">
+            <p class="homepageparagraph">I like builing cool electronics and stuff like my computer which my dad built 10 years ago and then he and I upgraded and refurnished it</p>
+            <img src="images/computer.jpeg" alt="computer" class="homepagepics">
+        </div>
+        <div class="homepagecontainers">
+            <p class="homepageparagraph">I have been in scouts since I was 6 years old and have gone on lots of campouts. I learned many leadership skills and basic life skills.</p>
+            <img src="images/scouts.JPEG" alt="" class="homepagepics">
+        </div>
+        <div class="homepagecontainers">
+            <p class="homepageparagraph">Hypixel skyblock is my favorite Minecraft game I could ramble about this for hours but I will spare you anyway it is a cool game that involves stratagy</p>
+            <img src="images/minecraft.jpg" alt="" class="homepagepics">
+        </div>
+        <div class="homepagecontainers">
+            <p class="homepageparagraph">Kirby is my favorite character in Super Smash Bros and I have trained an amazingly good Kirby amibo which I have named Pink Death. I have cleared world of light and main Kirby</p>
+            <img src="images/kirby_amibo.jpeg" alt="" class="homepagepics">
+        </div>
+        <div class="homepagecontainers">
+            <p class="homepageparagraph">My family has adopted 2 very friendly outdoor cats that used to be feral. Their names are Tigs and Mama cat I know the last one might not have been the most creative but oh well.</p>
+            <img src="images/cat_potrait.jpeg" alt="cat potrait" class="homepagepics">
+        </div>
     </main>
 </body>
-
 </html>

@@ -8,25 +8,60 @@
     <title>Alejandro Ortiz</title>
     <style>
         p {
+            width: 25%;
             text-align: center;
+            font-size: 2em;
+            display: flex;
+            flex-direction: column;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 1em;
+            border-width: 5px;
+            border-style: solid;
+            border-color: black;
+            border-top-left-radius: 5em;
+            border-bottom-right-radius: 5em;
+        }
+        a {
+            color: goldenrod;
         }
         img {
             display: block;
             margin-left: auto;
             margin-right: auto;
             width: 50%;
+            padding: 0px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: black;
+            border-radius: 5em;
+            margin-top: 3em;
         }
     </style>
+    <script src="javascript.js"></script>
 </head>
 
 <body>
     <header>
+        <div class="dropdown">
+            <button onclick="dropDownFunction(this)" class="dropbtn" id="dropdownbutton">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="/index">Home</a>
+                <a href="/about">About</a>
+                <a href="/tennis">Tennis</a>
+                <a href="/coding">Coding</a>
+            </div>
+          </div>
         <h1>Alejandro Ortiz</h1>
+        <img src="images/tennis.JPEG" alt="Profile Pic" id="profilePic">
     </header>
     <main>
-        <p>This is not the page you are looking for. <br>
-        Please go back to the <a href="/index.html">home page</a></p>
         <img src="images/404.jpg" alt="This is not the page that you are looking for" width="50%">
+        <p>Please go back to the <a href="/index.html">home page</a></p>
     </main>
 </body>
 
