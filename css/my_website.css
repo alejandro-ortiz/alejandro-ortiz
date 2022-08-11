@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: rgb(231, 231, 231);
+    background-color: rgb(126, 126, 126);
     color: black;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
@@ -9,7 +9,7 @@ body {
 p {
     padding: 1em;
     margin: 1em;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 }
 
 h1 {
@@ -23,23 +23,13 @@ img {
     padding: 1em;
 }
 
-#codingMain {
-    display: flex;
+.homepagecontainers {
+    width: 100%;
 }
 
-#codingMain p {
-    border-color: rgb(231, 231, 231);
-    border-style: solid;
-    border-radius: .5em;
-    margin: 20px;
-}
-
-#codingMain img {
-    border-color: rgb(231, 231, 231);
-    border-style: solid;
-    border-radius: .5em;
-    padding: 0;
-    margin: 20px;
+#tournamentgroup{
+    color: red;
+    font-style: bold;
 }
 
 #tennisMain {
@@ -49,7 +39,7 @@ img {
 #tennisMain img {
     width: 50%;
     height: auto;
-    border-color: rgb(231, 231, 231);
+    border-color: rgb(255, 255, 255);
     border-style: solid;
     border-radius: .5em;
     padding: 0;
@@ -62,13 +52,14 @@ img {
     border-radius: .5em;
 }
 
-#homeMain {
-    display: flex;
-}
-
 #aboutmain p{
     border-style: solid;
     border-radius: .5em;
+}
+
+#aboutmain a {
+    color: #699271;
+    font-style: bold;
 }
 
 .homepagecontainers {
@@ -96,28 +87,24 @@ img {
 #profilePic {
     width: 5em;
     padding: 0;
-    border-color: #ffffff;
-    border-style: solid;
-    border-width: .3em;
-    border-radius: 50%;
     margin: .3em;
 }
 
-#responsive {
+.responsive {
     display: flex;
 }
 
 header {
     display: flex;
-    background-color: rgb(0, 0, 0);
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: rgb(111, 111, 111);
     overflow: visible;
 }
 
 .bar1, .bar2, .bar3 {
   width: 35px;
   height: 5px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(126, 126, 126);
   margin: 3px 0;
   transition: 0.4s;
   padding: none;
@@ -141,7 +128,7 @@ transform: rotate(45deg) translate(-8px, -8px) ;
 
 /* Dropdown Button */
 .dropbtn {
-background-color: #000000;
+background-color: rgb(255, 255, 255);
 color: white;
 padding: 16px;
 font-size: 16px;
@@ -153,7 +140,7 @@ flex-direction: column;
 
 /* Dropdown button on hover & focus */
 .dropbtn:hover {
-    background-color: #a18900;
+    background-color: #4d7791;
   }
 
   
@@ -204,7 +191,7 @@ display: flex;
     }
 }
 @media (max-width: 1200px) {
-    #responsive {
+    .responsive {
         display: block;
     }
 }
