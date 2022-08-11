@@ -196,6 +196,12 @@ display: flex;
     #tennisMain img {
         width: 80%;
     }
+    #codingMain {
+        display: block;
+    }
+    #codingMain img {
+        width: 80%;
+    }
 }
 @media (max-width: 1200px) {
     #responsive {
