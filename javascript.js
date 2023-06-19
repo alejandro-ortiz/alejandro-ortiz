@@ -1,6 +1,7 @@
 function dropDownFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
     document.getElementById("dropdownbutton").classList.toggle("change");
+    document.getElementById("changedropdown").classList.toggle("change")
 }
 
 // window.onclick = function (event) {
