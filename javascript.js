@@ -17,15 +17,21 @@ if (typeof localStorage.getItem('player1errbrowser') === undefined) {
 let finalreport;
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("downloadreport").addEventListener("click", function() {
-        downloadCSV("alextennisreport.csv", finalreport);
+        player1err = localStorage.getItem('player1errbrowser')
+        player2err = localStorage.getItem('player2errbrowser')
+        player1win = localStorage.getItem('player1winbrowser')
+        player2win = localStorage.getItem('player2winbrowser')
+        finalreport = invertCSV(`${player1err}\n${player1win}\n${player2err}\n${player2win}`);
+        downloadCSV("matchreport.csv", finalreport);
       });      
     var form = document.getElementById("TennisForm");
     document.getElementById("endmatch").addEventListener("click", function(event) {
-      player1err = localStorage.getItem('player1errbrowser')
-      player2err = localStorage.getItem('player2errbrowser')
-      player1win = localStorage.getItem('player1winbrowser')
-      player2win = localStorage.getItem('player2winbrowser')
+        player1err = localStorage.getItem('player1errbrowser')
+        player2err = localStorage.getItem('player2errbrowser')
+        player1win = localStorage.getItem('player1winbrowser')
+        player2win = localStorage.getItem('player2winbrowser')
         finalreport = invertCSV(`${player1err}\n${player1win}\n${player2err}\n${player2win}`);
+        downloadCSV("midmatchreport.csv", finalreport);
         player1err = 'player1err';
         player2err = 'player2err';
         player1win = 'player1win';
