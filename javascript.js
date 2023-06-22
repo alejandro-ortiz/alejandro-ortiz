@@ -4,14 +4,16 @@ function dropDownFunction() {
     document.getElementById("changedropdown").classList.toggle("change");
 }
 
-let player1err = 'player1err';
-let player2err = 'player2err';
-let player1win = 'player1win';
-let player2win = 'player2win';
-localStorage.setItem('player1errbrowser', player1err)
-localStorage.setItem('player2errbrowser', player2err)
-localStorage.setItem('player1winbrowser', player1win)
-localStorage.setItem('player2winbrowser', player2win)
+if (typeof localStorage.getItem('player1errbrowser') === undefined) {
+    let player1err = 'player1err';
+    let player2err = 'player2err';
+    let player1win = 'player1win';
+    let player2win = 'player2win';
+    localStorage.setItem('player1errbrowser', player1err)
+    localStorage.setItem('player2errbrowser', player2err)
+    localStorage.setItem('player1winbrowser', player1win)
+    localStorage.setItem('player2winbrowser', player2win)
+}
 let finalreport;
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("downloadreport").addEventListener("click", function() {
