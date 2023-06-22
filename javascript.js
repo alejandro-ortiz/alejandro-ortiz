@@ -9,45 +9,45 @@ if (typeof localStorage.getItem('player1errbrowser') === undefined) {
     let player2err = 'player2err';
     let player1win = 'player1win';
     let player2win = 'player2win';
-    localStorage.setItem('player1errbrowser', player1err)
-    localStorage.setItem('player2errbrowser', player2err)
-    localStorage.setItem('player1winbrowser', player1win)
-    localStorage.setItem('player2winbrowser', player2win)
+    localStorage.setItem('player1errbrowser', player1err);
+    localStorage.setItem('player2errbrowser', player2err);
+    localStorage.setItem('player1winbrowser', player1win);
+    localStorage.setItem('player2winbrowser', player2win);
 }
 let finalreport;
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("downloadreport").addEventListener("click", function() {
-        player1err = localStorage.getItem('player1errbrowser')
-        player2err = localStorage.getItem('player2errbrowser')
-        player1win = localStorage.getItem('player1winbrowser')
-        player2win = localStorage.getItem('player2winbrowser')
+        player1err = localStorage.getItem('player1errbrowser');
+        player2err = localStorage.getItem('player2errbrowser');
+        player1win = localStorage.getItem('player1winbrowser');
+        player2win = localStorage.getItem('player2winbrowser');
         finalreport = invertCSV(`${player1err}\n${player1win}\n${player2err}\n${player2win}`);
         downloadCSV("matchreport.csv", finalreport);
       });      
     var form = document.getElementById("TennisForm");
     document.getElementById("endmatch").addEventListener("click", function(event) {
-        player1err = localStorage.getItem('player1errbrowser')
-        player2err = localStorage.getItem('player2errbrowser')
-        player1win = localStorage.getItem('player1winbrowser')
-        player2win = localStorage.getItem('player2winbrowser')
+        player1err = localStorage.getItem('player1errbrowser');
+        player2err = localStorage.getItem('player2errbrowser');
+        player1win = localStorage.getItem('player1winbrowser');
+        player2win = localStorage.getItem('player2winbrowser');
         finalreport = invertCSV(`${player1err}\n${player1win}\n${player2err}\n${player2win}`);
         downloadCSV("midmatchreport.csv", finalreport);
         player1err = 'player1err';
         player2err = 'player2err';
         player1win = 'player1win';
         player2win = 'player2win';
-        localStorage.setItem('player1errbrowser', player1err)
-        localStorage.setItem('player2errbrowser', player2err)
-        localStorage.setItem('player1winbrowser', player1win)
-        localStorage.setItem('player2winbrowser', player2win)
+        localStorage.setItem('player1errbrowser', player1err);
+        localStorage.setItem('player2errbrowser', player2err);
+        localStorage.setItem('player1winbrowser', player1win);
+        localStorage.setItem('player2winbrowser', player2win);
     });
     
     form.addEventListener("submit", function(event) {
       event.preventDefault(); // Prevent the form from submitting
-      player1err = localStorage.getItem('player1errbrowser')
-      player2err = localStorage.getItem('player2errbrowser')
-      player1win = localStorage.getItem('player1winbrowser')
-      player2win = localStorage.getItem('player2winbrowser')
+      player1err = localStorage.getItem('player1errbrowser');
+      player2err = localStorage.getItem('player2errbrowser');
+      player1win = localStorage.getItem('player1winbrowser');
+      player2win = localStorage.getItem('player2winbrowser');
       let player = document.querySelector('input[name="q1"]:checked').value;
       let shot = document.querySelector('input[name="q2"]:checked').value;
       let stroke = document.querySelector('input[name="q3"]:checked').value;
@@ -56,21 +56,21 @@ document.addEventListener("DOMContentLoaded", function() {
       // Do something with the selected answers
       if (player == "player1") {
         if (shot == "(++)") {
-            player1win += `,${shot} ${stroke} ${zone} ${direction}`
+            player1win += `,${shot} ${stroke} ${zone} ${direction}`;
         } else {
-            player1err += `,${shot} ${stroke} ${zone} ${direction}`
+            player1err += `,${shot} ${stroke} ${zone} ${direction}`;
         }
         } else {
             if (shot == "(++)") {
-                player2win += `,${shot} ${stroke} ${zone} ${direction}`
+                player2win += `,${shot} ${stroke} ${zone} ${direction}`;
             } else {
-                player2err += `,${shot} ${stroke} ${zone} ${direction}`
+                player2err += `,${shot} ${stroke} ${zone} ${direction}`;
             }
         }
-        localStorage.setItem('player1errbrowser', player1err)
-        localStorage.setItem('player2errbrowser', player2err)
-        localStorage.setItem('player1winbrowser', player1win)
-        localStorage.setItem('player2winbrowser', player2win)
+        localStorage.setItem('player1errbrowser', player1err);
+        localStorage.setItem('player2errbrowser', player2err);
+        localStorage.setItem('player1winbrowser', player1win);
+        localStorage.setItem('player2winbrowser', player2win);
       // Reset the form
       form.reset();
     });

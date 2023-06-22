@@ -239,7 +239,7 @@ fieldset {
   border-color: #c2a500;
   border-radius: .5em;
   padding: 10px;
-  padding-bottom: 1em;
+  padding-bottom: .75em;
 }
 
 #formbuttons {
@@ -326,14 +326,17 @@ button[type="button"]:active {
 @media (max-width: 850px) {
     label {
         display: inline-block;
-        margin-top: .25em;
-        margin-bottom: .25em;
+        margin-top: .1em;
+        margin-bottom: .1em;
     }
     .formblockbottom {
         margin-top: 0;
     }
     .formblocktop {
         margin-bottom: 0;
+    }
+    fieldset {
+        padding-bottom: .5em;
     }
 }
 @media (max-width: 700px) {
