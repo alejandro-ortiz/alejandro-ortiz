@@ -4,14 +4,14 @@ function dropDownFunction() {
     document.getElementById("changedropdown").classList.toggle("change");
 }
 
-const player1err = [];
-const player2err = [];
-const player1win = [];
-const player2win = [];
-let player1errfinal = 'player1err';
-let player2errfinal = 'player2err';
-let player1winfinal = 'player1win';
-let player2winfinal = 'player2win';
+let player1err = 'player1err';
+let player2err = 'player2err';
+let player1win = 'player1win';
+let player2win = 'player2win';
+localStorage.setItem('player1errbrowser', player1err)
+localStorage.setItem('player2errbrowser', player2err)
+localStorage.setItem('player1winbrowser', player1win)
+localStorage.setItem('player2winbrowser', player2win)
 let finalreport;
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("downloadreport").addEventListener("click", function() {
@@ -19,40 +19,27 @@ document.addEventListener("DOMContentLoaded", function() {
       });      
     var form = document.getElementById("TennisForm");
     document.getElementById("endmatch").addEventListener("click", function(event) {
-        for (let i = 0; i < player1err.length; i++) {
-            player1errfinal += ","
-            for (let i2 = 0; i2 < player1err[i].length; i2++) {
-                player1errfinal += `${player1err[i][i2]} `;
-            }
-        }
-        for (let i = 0; i < player2err.length; i++) {
-            player2errfinal += ","
-            for (let i2 = 0; i2 < player2err[i].length; i2++) {
-                player2errfinal += `${player2err[i][i2]} `;
-            }
-        }
-        for (let i = 0; i < player1win.length; i++) {
-            player1winfinal += ","
-            for (let i2 = 0; i2 < player1win[i].length; i2++) {
-                player1winfinal += `${player1win[i][i2]} `;
-            }
-        }
-        for (let i = 0; i < player2win.length; i++) {
-            player2winfinal += ","
-            for (let i2 = 0; i2 < player2win[i].length; i2++) {
-                player2winfinal += `${player2win[i][i2]} `;
-            }
-        }
-        finalreport = invertCSV(`${player1errfinal}\n${player1winfinal}\n${player2errfinal}\n${player2winfinal}`);
-        player1err.splice(0);
-        player2err.splice(0);
-        player1win.splice(0);
-        player2win.splice(0);
+      player1err = localStorage.getItem('player1errbrowser')
+      player2err = localStorage.getItem('player2errbrowser')
+      player1win = localStorage.getItem('player1winbrowser')
+      player2win = localStorage.getItem('player2winbrowser')
+        finalreport = invertCSV(`${player1err}\n${player1win}\n${player2err}\n${player2win}`);
+        player1err = 'player1err';
+        player2err = 'player2err';
+        player1win = 'player1win';
+        player2win = 'player2win';
+        localStorage.setItem('player1errbrowser', player1err)
+        localStorage.setItem('player2errbrowser', player2err)
+        localStorage.setItem('player1winbrowser', player1win)
+        localStorage.setItem('player2winbrowser', player2win)
     });
     
     form.addEventListener("submit", function(event) {
       event.preventDefault(); // Prevent the form from submitting
-    
+      player1err = localStorage.getItem('player1errbrowser')
+      player2err = localStorage.getItem('player2errbrowser')
+      player1win = localStorage.getItem('player1winbrowser')
+      player2win = localStorage.getItem('player2winbrowser')
       let player = document.querySelector('input[name="q1"]:checked').value;
       let shot = document.querySelector('input[name="q2"]:checked').value;
       let stroke = document.querySelector('input[name="q3"]:checked').value;
@@ -61,18 +48,21 @@ document.addEventListener("DOMContentLoaded", function() {
       // Do something with the selected answers
       if (player == "player1") {
         if (shot == "(++)") {
-            player1win.push([shot, stroke, zone, direction])
+            player1win += `,${shot} ${stroke} ${zone} ${direction}`
         } else {
-            player1err.push([shot, stroke, zone, direction])
+            player1err += `,${shot} ${stroke} ${zone} ${direction}`
         }
         } else {
             if (shot == "(++)") {
-                player2win.push([shot, stroke, zone, direction])
+                player2win += `,${shot} ${stroke} ${zone} ${direction}`
             } else {
-                player2err.push([shot, stroke, zone, direction])
+                player2err += `,${shot} ${stroke} ${zone} ${direction}`
             }
         }
-    
+        localStorage.setItem('player1errbrowser', player1err)
+        localStorage.setItem('player2errbrowser', player2err)
+        localStorage.setItem('player1winbrowser', player1win)
+        localStorage.setItem('player2winbrowser', player2win)
       // Reset the form
       form.reset();
     });
