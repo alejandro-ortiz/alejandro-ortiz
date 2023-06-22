@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/my_website.css">
+    <script src="javascript.js"></script>
+    <title>Alex Ortiz</title>
+</head>
+
+<body>
+    <header id="changedropdown">
+        <div class="dropdown" id="dropdown">
+            <button onclick="dropDownFunction(this)" class="dropbtn" id="dropdownbutton">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="/index">Home</a>
+              <a href="/about">About</a>
+              <a href="/tennis">Tennis</a>
+              <a href="/coding">Coding</a>
+              <a href="/point-tracker">Point-Tracker</a>
+            </div>
+          </div>
+        <h1>Alex Ortiz</h1>
+        <img src="images/tennis.JPEG" alt="Profile Pic" id="profilePic">
+    </header>
+    <main id="homeMain">
+        <form id="TennisForm">
+            <fieldset>
+              <legend>Which player hit the last ball</legend>
+              <label>
+                <input type="radio" name="q1" value="player1">
+                Player1
+              </label>
+              <label>
+                <input type="radio" name="q1" value="player2">
+                Player2
+              </label>
+            </fieldset>
+          
+            <fieldset>
+              <legend>What type of shot was hit</legend>
+              <label>
+                <input type="radio" name="q2" value="(--)">
+                Unforced error
+              </label>
+              <label>
+                <input type="radio" name="q2" value="(-f)">
+                Forced error
+              </label>
+              <label>
+                <input type="radio" name="q2" value="(++)">
+                Winner
+              </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>What type of stroke was hit</legend>
+                <div class="formblocktop">
+                    <label>
+                    <input type="radio" name="q3" value="FHG">
+                    Forehand groundstroke
+                    </label>
+                    <label>
+                    <input type="radio" name="q3" value="BHG">
+                    Backhand groundstroke
+                    </label>
+                    <label>
+                        <input type="radio" name="q3" value="BHS">
+                        Backhand slice
+                    </label>
+                </div>
+                <div class="formblockbottom">
+                    <label>
+                    <input type="radio" name="q3" value="FHV">
+                    Forehand volley
+                    </label>
+                    <label>
+                        <input type="radio" name="q3" value="BHV">
+                        Backhand volley
+                        </label>
+                    <label>
+                        <input type="radio" name="q3" value="OV">
+                        Overhead
+                    </label>
+                    <label>
+                        <input type="radio" name="q3" value="SV">
+                        Serve
+                    </label>
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend>What zone of the court was the shot hit in?</legend>
+                <label>
+                  <input type="radio" name="q4" value="G">
+                  Green
+                </label>
+                <label>
+                  <input type="radio" name="q4" value="Y">
+                  Yellow
+                </label>
+                <label>
+                  <input type="radio" name="q4" value="R">
+                  Red
+                </label>
+              </fieldset>
+
+              <fieldset>
+                <legend>Direction of winner/area of miss</legend>
+                <div class="formblocktop">
+                    <label>
+                    <input type="radio" name="q5" value="CC">
+                    Cross court winner
+                    </label>
+                    <label>
+                    <input type="radio" name="q5" value="DL">
+                    Down the line winner
+                    </label>
+                </div>
+                <div class="formblockbottom">
+                    <label>
+                    <input type="radio" name="q5" value="W">
+                    Miss wide
+                    </label>
+                    <label>
+                        <input type="radio" name="q5" value="N">
+                        Miss net
+                    </label>
+                    <label>
+                        <input type="radio" name="q5" value="L">
+                        Miss long
+                    </label>
+                </div>
+              </fieldset>
+            <div id="formbuttons">
+              <button type="submit">Next Point</button>
+              <button type="button" id="endmatch">End Match</button>
+            </div>
+            <button type="button" id="downloadreport">Download Report</button>
+        </form>
+    </main>
+</body>
+</html>
