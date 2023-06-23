@@ -203,6 +203,34 @@ select {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
+  display: none;
+}
+
+.checkedinput {
+    background-color: #007bff;
+    color: white;
+}
+
+.labelcontainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.labelcontainer label {
+    flex-grow: 1;
+}
+
+label {
+  border-color: #8EC468;
+  border-style: solid;
+  border-width: .2em;
+  border-radius: .5em;
+  padding: .25em;
+  margin-right: .5em;
+  margin-left: .5em;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: .1em;
+  cursor: pointer;
 }
 
 form {
@@ -219,30 +247,18 @@ form {
     margin-top: 1.25em;
 }
 
-label {
-    border-color: rgb(28, 28, 28);
-    border-style: solid;
-    border-width: .2em;
-    border-radius: .5em;
-    padding: .25em;
-    margin-right: .5em;
-    margin-left: .5em;
-    background-color: rgb(255, 255, 255);
-    margin-bottom: 1em;
-}
-
 /* Apply custom styles to form fieldsets */
 fieldset {
     border-style: solid;
   margin-bottom: .2em;
   border-width: .3em;
-  border-color: #c2a500;
+  border-color: #A09F91;
   border-radius: .5em;
   padding: 10px;
   padding-bottom: .75em;
 }
 
-#formbuttons {
+.formbuttons {
     margin-bottom: 1em;
     margin-top: 1em;
 }
@@ -250,32 +266,13 @@ fieldset {
 /* Apply custom styles to form legends */
 legend {
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-top: .3em;
 }
 
-/* Apply styles to the submit button */
-button[type="submit"] {
-  padding: 15px 25px;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  font-size: 1em;
-}
-
-button[type="submit"]:hover {
-  background-color: #45a049;
-}
-
-button[type="submit"]:active {
-  background-color: #3c903b;
-}
-
-button[type="button"] {
+/* Apply styles to the  button */
+.formbuttons button {
     padding: 15px 25px;
-    background-color: #ca1616;
+    background-color: #007bff;
     color: white;
     border: none;
     border-radius: 4px;
@@ -284,12 +281,12 @@ button[type="button"] {
     font-size: 1em;
 }
 
-button[type="button"]:hover {
-    background-color: #c51414;
+.formbuttons button:hover {
+    background-color: #0066d3;
 }
 
-button[type="button"]:active {
-    background-color: #8b1414;
+.formbuttons button:active {
+    background-color: #004a9a;
 }
 
 #downloadreport {
@@ -316,9 +313,9 @@ button[type="button"]:active {
     }
 }
 @media (max-width: 1000px) {
-    #homeMain {
+    /* #homeMain {
         display: block;
-    }
+    } */
     .homepagepics {
         width: 50%;
     }
@@ -326,8 +323,9 @@ button[type="button"]:active {
 @media (max-width: 850px) {
     label {
         display: inline-block;
-        margin-top: .1em;
+        margin-top: .3em;
         margin-bottom: .1em;
+        text-align: center;
     }
     .formblockbottom {
         margin-top: 0;
