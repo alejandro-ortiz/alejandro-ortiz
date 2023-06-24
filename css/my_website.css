@@ -68,6 +68,8 @@ img {
     display: flex;
 }
 
+#formMain
+
 #aboutmain p{
     border-style: solid;
     border-radius: .5em;
@@ -313,9 +315,9 @@ legend {
     }
 }
 @media (max-width: 1000px) {
-    /* #homeMain {
+    #homeMain {
         display: block;
-    } */
+    }
     .homepagepics {
         width: 50%;
     }
